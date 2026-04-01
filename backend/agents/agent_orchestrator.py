@@ -51,14 +51,15 @@ class AgentOrchestrator:
         if demo_scenario and demo_scenario in demo_responses and agent_name in demo_responses[demo_scenario]:
             content = demo_responses[demo_scenario][agent_name]
         else:
+            # ~10–15 lines × 1–2 sentences; synthesis extra for Mermaid
             max_tokens_map = {
-                "breakdown": 350,
-                "research": 500,
-                "framework": 500,
-                "redTeam": 450,
-                "synthesis": 700,
-                "explainer": 400,
-                "comparison": 500,
+                "breakdown": 550,
+                "research": 650,
+                "framework": 650,
+                "redTeam": 600,
+                "synthesis": 1400,
+                "explainer": 550,
+                "comparison": 650,
             }
             response = await call_openrouter(
                 system=agent_prompts.get(agent_name, "You are a helpful assistant."),
@@ -79,13 +80,14 @@ class AgentOrchestrator:
 
     @staticmethod
     def get_agent_instruction(agent_name: str) -> str:
+        tail = "Respond with 10–15 numbered or bullet points; each point 1–2 full sentences, specific to this decision."
         instructions = {
-            "breakdown": "Break down this decision into key sub-decisions and factors.",
-            "research": "Research relevant data and trends; include source links when possible.",
-            "framework": "Apply decision frameworks and confidence scoring.",
-            "redTeam": "Challenge assumptions and identify hidden risks.",
-            "synthesis": "Synthesize all analysis into final recommendation and Mermaid flowchart.",
-            "explainer": "Explain the requested branch in detail with confidence and risk.",
-            "comparison": "Compare the provided options side by side.",
+            "breakdown": f"Break down this decision into sub-decisions, factors, gaps, and stakeholders. {tail}",
+            "research": f"Give research-style angles, risks, upsides, and what to verify next. Do not invent URLs. {tail}",
+            "framework": f"Apply frameworks (SWOT, pre-mortem, criteria, confidence on your framing). {tail}",
+            "redTeam": f"Stress-test assumptions, biases, and failure modes. {tail}",
+            "synthesis": f"Synthesize prior angles, then add one Mermaid flowchart in a ```mermaid block. {tail}",
+            "explainer": f"Explain this branch with confidence and risks. {tail}",
+            "comparison": f"Compare the two options point by point. {tail}",
         }
-        return instructions.get(agent_name, "Provide your best analysis.")
+        return instructions.get(agent_name, f"Provide your best analysis. {tail}")

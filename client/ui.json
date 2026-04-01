@@ -1,862 +1,1373 @@
 {
-    "project": {
-        "name": "Your Coffee Pal",
-        "type": "Editorial Podcast Website",
-        "description": "A podcast website about coffee culture, featuring baristas and coffee shop owners",
-        "theme": "editorial-dark",
-        "language": "en"
+    "meta": {
+        "version": "1.0.0",
+        "theme": "Neubrutalism",
+        "description": "Neubrutalism UI Design System — Tokens, Components, States, Accessibility, and Guidelines",
+        "referenceSources": [
+            "NFT Marketplace App",
+            "Finance Dashboard App",
+            "Fashion E-Commerce Web",
+            "SaaS Chat Landing Page"
+        ]
     },
-    "design_tokens": {
-        "colors": {
-            "primary": {
-                "yellow": "#F5C800",
-                "yellow_dark": "#D4A800",
-                "yellow_bar": "#F5C800"
+    "theme": {
+        "name": "neubrutalism",
+        "mode": "light"
+    },
+    "tokens": {
+        "color": {
+            "brand": {
+                "primary": "#C8FF00",
+                "primary-dark": "#A3D400",
+                "secondary": "#7B5CF6",
+                "secondary-light": "#C4B5FD",
+                "accent-coral": "#FF6B6B",
+                "accent-mint": "#00E5C4",
+                "accent-lilac": "#C084FC",
+                "accent-amber": "#FBBF24"
             },
-            "neutrals": {
-                "black": "#0A0A0A",
-                "dark_bg": "#111111",
-                "card_bg": "#1A1A1A",
-                "overlay_dark": "rgba(0, 0, 0, 0.55)",
-                "overlay_gradient": "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
-                "white": "#FFFFFF",
-                "white_70": "rgba(255,255,255,0.70)",
-                "white_50": "rgba(255,255,255,0.50)",
-                "white_30": "rgba(255,255,255,0.30)"
+            "neutral": {
+                "black": "#0D0D0D",
+                "ink": "#1A1A1A",
+                "border": "#000000",
+                "surface": "#FFFFFF",
+                "off-white": "#F9F9F5",
+                "muted": "#E5E5E0",
+                "subtle": "#AEAEAE"
             },
-            "text": {
-                "primary": "#FFFFFF",
-                "secondary": "rgba(255,255,255,0.70)",
-                "muted": "rgba(255,255,255,0.45)",
-                "on_yellow": "#0A0A0A"
+            "semantic": {
+                "success": "#00C853",
+                "warning": "#FFD600",
+                "error": "#FF1744",
+                "info": "#00B0FF"
+            },
+            "background": {
+                "page-green": "#BFFF00",
+                "page-pink": "#F9A8D4",
+                "page-purple": "#EDE9FE",
+                "page-white": "#FFFFFF",
+                "page-orange": "#FB923C"
             }
         },
         "typography": {
-            "fonts": {
-                "display_script": {
-                    "family": "Dancing Script, Pacifico, cursive",
-                    "google_import": "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap",
-                    "usage": "Hero headline, episode names, logo wordmark",
-                    "notes": "Mimics the hand-lettered script style visible in the design for 'Your Coffee Pal', 'Kenji Matsunaga', 'Ben and Samantha', etc."
-                },
-                "body_sans": {
-                    "family": "DM Sans, sans-serif",
-                    "google_import": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap",
-                    "usage": "Navigation links, body copy, labels, episode descriptions"
-                },
-                "mono": {
-                    "family": "JetBrains Mono, monospace",
-                    "usage": "Duration timestamp, version strings"
-                }
+            "fontFamily": {
+                "display": "'Space Mono', 'Courier New', monospace",
+                "heading": "'Syne', 'Archivo Black', sans-serif",
+                "body": "'DM Sans', 'Nunito', sans-serif",
+                "mono": "'Space Mono', 'IBM Plex Mono', monospace",
+                "label": "'DM Sans', sans-serif"
             },
-            "scale": {
-                "logo": {
-                    "size": "36px",
-                    "weight": "700",
-                    "lineHeight": "1.0",
-                    "font": "display_script"
-                },
-                "hero_name": {
-                    "size": "clamp(56px, 8vw, 110px)",
-                    "weight": "700",
-                    "lineHeight": "0.95",
-                    "font": "display_script"
-                },
-                "section_title": {
-                    "size": "clamp(36px, 5vw, 64px)",
-                    "weight": "700",
-                    "font": "display_script"
-                },
-                "card_name": {
-                    "size": "clamp(28px, 3.5vw, 48px)",
-                    "weight": "700",
-                    "font": "display_script"
-                },
-                "nav_link": {
-                    "size": "12px",
-                    "weight": "400",
-                    "letterSpacing": "0.04em",
-                    "font": "body_sans"
-                },
-                "section_label": {
-                    "size": "11px",
-                    "weight": "600",
-                    "letterSpacing": "0.12em",
-                    "textTransform": "uppercase",
-                    "font": "body_sans"
-                },
-                "episode_title": {
-                    "size": "14px",
-                    "weight": "500",
-                    "font": "body_sans"
-                },
-                "body": {
-                    "size": "13px",
-                    "weight": "400",
-                    "lineHeight": "1.7",
-                    "font": "body_sans"
-                },
-                "meta": {
-                    "size": "11px",
-                    "weight": "400",
-                    "color": "white_50",
-                    "font": "body_sans"
-                },
-                "timestamp": {
-                    "size": "13px",
-                    "weight": "500",
-                    "font": "mono"
-                },
-                "cta_button": {
-                    "size": "12px",
-                    "weight": "600",
-                    "letterSpacing": "0.06em",
-                    "font": "body_sans"
-                }
+            "fontWeight": {
+                "regular": 400,
+                "medium": 500,
+                "semibold": 600,
+                "bold": 700,
+                "extrabold": 800,
+                "black": 900
+            },
+            "fontSize": {
+                "xs": "11px",
+                "sm": "13px",
+                "base": "15px",
+                "md": "17px",
+                "lg": "20px",
+                "xl": "24px",
+                "2xl": "30px",
+                "3xl": "38px",
+                "4xl": "48px",
+                "5xl": "64px"
+            },
+            "lineHeight": {
+                "tight": 1.15,
+                "normal": 1.45,
+                "loose": 1.70
+            },
+            "letterSpacing": {
+                "tight": "-0.03em",
+                "normal": "0em",
+                "wide": "0.06em",
+                "wider": "0.12em"
             }
         },
         "spacing": {
+            "0": "0px",
+            "1": "4px",
+            "2": "8px",
+            "3": "12px",
+            "4": "16px",
+            "5": "20px",
+            "6": "24px",
+            "8": "32px",
+            "10": "40px",
+            "12": "48px",
+            "16": "64px",
+            "20": "80px",
+            "24": "96px",
+            "32": "128px"
+        },
+        "layout": {
+            "containerMaxWidth": "1280px",
+            "containerPadding": "24px",
+            "gridGutter": "16px",
+            "sectionGap": "80px",
+            "cardPadding": "20px"
+        },
+        "borderRadius": {
+            "none": "0px",
             "xs": "4px",
-            "sm": "8px",
-            "md": "16px",
-            "lg": "24px",
-            "xl": "40px",
-            "2xl": "64px",
-            "3xl": "96px",
-            "page_padding_x": "clamp(24px, 5vw, 80px)"
+            "sm": "6px",
+            "md": "10px",
+            "lg": "14px",
+            "xl": "20px",
+            "2xl": "28px",
+            "pill": "9999px",
+            "circle": "50%"
         },
-        "border_radius": {
-            "sm": "4px",
-            "md": "8px",
-            "lg": "12px",
-            "pill": "999px"
+        "shadow": {
+            "none": "none",
+            "xs": "2px 2px 0px #000000",
+            "sm": "3px 3px 0px #000000",
+            "md": "4px 4px 0px #000000",
+            "lg": "6px 6px 0px #000000",
+            "xl": "8px 8px 0px #000000",
+            "2xl": "12px 12px 0px #000000",
+            "colored-green": "4px 4px 0px #C8FF00",
+            "colored-purple": "4px 4px 0px #7B5CF6",
+            "colored-coral": "4px 4px 0px #FF6B6B",
+            "inset-pressed": "inset 2px 2px 0px #000000"
         },
-        "shadows": {
-            "card": "0 8px 32px rgba(0,0,0,0.5)",
-            "button": "0 4px 16px rgba(0,0,0,0.3)",
-            "text_shadow": "0 2px 16px rgba(0,0,0,0.6)"
-        },
-        "sidebar": {
-            "width": "32px",
-            "background": "#F5C800",
-            "text_color": "#0A0A0A",
-            "font_size": "10px",
-            "font_weight": "700",
-            "letter_spacing": "0.18em",
-            "text_transform": "uppercase",
-            "writing_mode": "vertical-rl",
-            "text_orientation": "mixed",
-            "labels": {
-                "top": "EDITORIAL",
-                "bottom": "DESIGN EXPLORATION"
-            }
-        }
-    },
-    "layout": {
-        "type": "magazine-editorial",
-        "structure": "left-sidebar + main-content",
-        "sidebar": {
-            "position": "fixed-left",
-            "width": "32px",
-            "full_height": true,
-            "background": "yellow",
-            "contains": [
-                "sidebar_labels"
-            ]
-        },
-        "main": {
-            "margin_left": "32px",
-            "display": "grid",
-            "sections": [
-                "navigation",
-                "hero",
-                "latest_episodes",
-                "side_panel"
-            ]
-        },
-        "grid": {
-            "main_layout": "hero-left + side-panel-right",
-            "hero_width": "62%",
-            "side_panel_width": "38%",
-            "breakpoints": {
-                "mobile": "< 768px",
-                "tablet": "768px - 1024px",
-                "desktop": "> 1024px"
-            }
+        "breakpoints": {
+            "xs": "0px",
+            "sm": "480px",
+            "md": "768px",
+            "lg": "1024px",
+            "xl": "1280px",
+            "2xl": "1536px"
         }
     },
     "components": {
-        "sidebar_label": {
-            "type": "fixed-vertical-bar",
-            "position": "left",
-            "width": "32px",
-            "height": "100vh",
-            "background": "#F5C800",
-            "items": [
+        "Button": {
+            "variants": [
                 {
-                    "text": "EDITORIAL",
-                    "position": "top",
-                    "padding_top": "24px"
-                },
-                {
-                    "text": "DESIGN EXPLORATION",
-                    "position": "bottom",
-                    "padding_bottom": "24px"
-                }
-            ],
-            "text_style": {
-                "font": "body_sans",
-                "size": "10px",
-                "weight": "700",
-                "color": "#0A0A0A",
-                "letter_spacing": "0.18em",
-                "writing_mode": "vertical-rl"
-            }
-        },
-        "navigation": {
-            "type": "horizontal-navbar",
-            "position": "absolute",
-            "z_index": 100,
-            "background": "transparent",
-            "padding": "20px 32px",
-            "layout": "logo | nav-groups | cta-button",
-            "logo": {
-                "type": "wordmark",
-                "text": "Your\nCoffee\nPal",
-                "font": "display_script",
-                "size": "28px",
-                "color": "#FFFFFF",
-                "line_height": "1.1",
-                "multiline": true
-            },
-            "nav_groups": [
-                {
-                    "id": "group_1",
-                    "items": [
-                        {
-                            "label": "HOME",
-                            "href": "/"
+                    "name": "primary",
+                    "description": "Main CTA — high-visibility action",
+                    "props": {
+                        "label": "Start Now!",
+                        "variant": "primary",
+                        "size": "lg",
+                        "disabled": false,
+                        "loading": false,
+                        "iconPosition": "none"
+                    },
+                    "tokens": {
+                        "background": "brand.primary",
+                        "color": "neutral.black",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.pill",
+                        "shadow": "shadow.md",
+                        "fontSize": "typography.fontSize.md",
+                        "fontWeight": "typography.fontWeight.bold",
+                        "paddingX": "spacing.8",
+                        "paddingY": "spacing.4"
+                    },
+                    "states": {
+                        "hover": {
+                            "shadow": "shadow.lg",
+                            "transform": "translate(-2px, -2px)"
                         },
-                        {
-                            "label": "PODCASTS",
-                            "href": "/podcasts"
+                        "active": {
+                            "shadow": "shadow.xs",
+                            "transform": "translate(2px, 2px)"
                         },
-                        {
-                            "label": "MAGAZINE",
-                            "href": "/magazine"
+                        "focus": {
+                            "outline": "3px solid brand.secondary",
+                            "outlineOffset": "2px"
                         },
-                        {
-                            "label": "EVENTS",
-                            "href": "/events"
+                        "disabled": {
+                            "opacity": 0.4,
+                            "cursor": "not-allowed",
+                            "shadow": "none"
                         }
-                    ]
+                    },
+                    "reference": "Image 1 — 'Start Now!' lime green pill button"
                 },
                 {
-                    "id": "group_2",
-                    "items": [
-                        {
-                            "label": "HANGOUT",
-                            "href": "/hangout"
-                        },
-                        {
-                            "label": "GUIDEBOOK",
-                            "href": "/guidebook"
-                        },
-                        {
-                            "label": "MERCH",
-                            "href": "/merch"
-                        },
-                        {
-                            "label": "MARKETPLACE",
-                            "href": "/marketplace"
-                        }
-                    ]
+                    "name": "secondary",
+                    "description": "Follow / subscribe action",
+                    "props": {
+                        "label": "Start Following",
+                        "variant": "secondary",
+                        "size": "md",
+                        "trailingIcon": "plus"
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "color": "neutral.black",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "shadow": "shadow.md"
+                    },
+                    "reference": "Image 1 — 'Start Following' button on profile screen"
                 },
                 {
-                    "id": "group_3",
-                    "items": [
-                        {
-                            "label": "ABOUT US",
-                            "href": "/about"
-                        },
-                        {
-                            "label": "PRESS RELEASE",
-                            "href": "/press"
-                        },
-                        {
-                            "label": "CONTACT",
-                            "href": "/contact"
-                        }
-                    ]
-                }
-            ],
-            "nav_link_style": {
-                "font": "body_sans",
-                "size": "11px",
-                "weight": "400",
-                "color": "rgba(255,255,255,0.80)",
-                "letter_spacing": "0.05em",
-                "hover_color": "#FFFFFF",
-                "text_transform": "uppercase",
-                "display": "block",
-                "line_height": "1.8"
-            },
-            "cta_button": {
-                "label": "Be a Contributor",
-                "href": "/contribute",
-                "style": {
-                    "background": "transparent",
-                    "border": "1px solid rgba(255,255,255,0.6)",
-                    "border_radius": "999px",
-                    "padding": "8px 20px",
-                    "font": "body_sans",
-                    "size": "11px",
-                    "weight": "500",
-                    "color": "#FFFFFF",
-                    "hover_background": "#FFFFFF",
-                    "hover_color": "#0A0A0A",
-                    "transition": "all 0.25s ease"
-                }
-            }
-        },
-        "hero_section": {
-            "type": "full-bleed-hero",
-            "height": "100vh",
-            "min_height": "700px",
-            "position": "relative",
-            "overflow": "hidden",
-            "background": {
-                "type": "image",
-                "description": "Dark moody photograph of a barista working in a coffee shop — cinematic, desaturated",
-                "placeholder_color": "#1A1414",
-                "overlay": "linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.20) 100%)",
-                "object_fit": "cover",
-                "object_position": "center top"
-            },
-            "featured_episode_badge": {
-                "display": false,
-                "notes": "No visible badge in the design; the name acts as the focus"
-            },
-            "intro_text": {
-                "position": "bottom-left",
-                "max_width": "320px",
-                "content": {
-                    "column_1": "Today, we're sitting down with Kenji Matsunaga, the head barista at Haru Brew Tokyo, a cozy café known for its slow mornings and hand-crafted espresso. Kenji shares his journey from a curious coffee drinker to a barista who treats every cup as a conversation — between beans, water, and time.",
-                    "column_2": "From experimenting with light roasts to curating seasonal blends, Kenji sees coffee as both science and art. In our chat, he opens up about the small rituals that keep him inspired, the challenge of balancing precision with passion, and the quiet joy of seeing someone's first sip turn into a smile."
-                },
-                "style": {
-                    "font": "body_sans",
-                    "size": "13px",
-                    "color": "rgba(255,255,255,0.75)",
-                    "line_height": "1.7",
-                    "columns": 2,
-                    "column_gap": "32px"
-                }
-            },
-            "hero_name": {
-                "type": "large-script-overlay",
-                "text": "Kenji\nMatsunaga",
-                "position": "center-bottom-left",
-                "style": {
-                    "font": "display_script",
-                    "size": "clamp(64px, 9vw, 120px)",
-                    "color": "#FFFFFF",
-                    "line_height": "0.92",
-                    "text_shadow": "0 4px 32px rgba(0,0,0,0.5)",
-                    "z_index": 10
-                }
-            },
-            "watch_button": {
-                "label": "Watch Now",
-                "duration": "30:48",
-                "icon": "play_triangle",
-                "position": "bottom-center-right of text columns",
-                "style": {
-                    "background": "#FFFFFF",
-                    "color": "#0A0A0A",
-                    "border_radius": "999px",
-                    "padding": "12px 24px",
-                    "font": "body_sans",
-                    "size": "13px",
-                    "weight": "600",
-                    "display": "flex",
-                    "align_items": "center",
-                    "gap": "12px",
-                    "duration_style": {
-                        "font": "mono",
-                        "size": "13px",
-                        "opacity": 0.6
+                    "name": "cta-dark",
+                    "description": "High-emphasis dark CTA",
+                    "props": {
+                        "label": "Get Started",
+                        "variant": "cta-dark",
+                        "size": "md"
                     },
-                    "play_icon": {
-                        "shape": "triangle",
-                        "size": "10px",
-                        "color": "#0A0A0A"
+                    "tokens": {
+                        "background": "neutral.black",
+                        "color": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.sm",
+                        "shadow": "shadow.colored-green"
                     },
-                    "hover": {
-                        "background": "#F5C800",
-                        "color": "#0A0A0A"
-                    },
-                    "transition": "all 0.25s ease"
-                }
-            }
-        },
-        "latest_episodes_section": {
-            "type": "horizontal-scroll-cards",
-            "label": "LATEST EPISODES",
-            "label_style": {
-                "font": "body_sans",
-                "size": "11px",
-                "weight": "600",
-                "letter_spacing": "0.14em",
-                "color": "rgba(255,255,255,0.55)",
-                "text_transform": "uppercase",
-                "margin_bottom": "20px"
-            },
-            "padding": "48px 0",
-            "background": "#0A0A0A",
-            "navigation_arrows": {
-                "type": "circle-buttons",
-                "left_icon": "←",
-                "right_icon": "→",
-                "style": {
-                    "width": "36px",
-                    "height": "36px",
-                    "border": "1px solid rgba(255,255,255,0.25)",
-                    "border_radius": "50%",
-                    "background": "transparent",
-                    "color": "#FFFFFF",
-                    "font_size": "14px",
-                    "hover_background": "#FFFFFF",
-                    "hover_color": "#0A0A0A"
-                }
-            },
-            "card_grid": {
-                "display": "flex",
-                "gap": "20px",
-                "overflow_x": "auto",
-                "scroll_behavior": "smooth",
-                "scrollbar": "hidden"
-            },
-            "episode_card": {
-                "type": "image-overlay-card",
-                "width": "clamp(220px, 22vw, 300px)",
-                "aspect_ratio": "3/4",
-                "border_radius": "8px",
-                "overflow": "hidden",
-                "cursor": "pointer",
-                "image": {
-                    "type": "photo",
-                    "description": "Portrait photo of barista/coffee shop owner in their space",
-                    "object_fit": "cover",
-                    "width": "100%",
-                    "height": "100%",
-                    "filter": "brightness(0.75)"
-                },
-                "overlay": {
-                    "type": "gradient",
-                    "background": "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)"
-                },
-                "content": {
-                    "position": "absolute",
-                    "bottom": "0",
-                    "left": "0",
-                    "right": "0",
-                    "padding": "20px 16px",
-                    "episode_name": {
-                        "type": "script-text",
-                        "font": "display_script",
-                        "size": "clamp(24px, 3vw, 38px)",
-                        "color": "#FFFFFF",
-                        "line_height": "1.0",
-                        "margin_bottom": "6px"
-                    },
-                    "episode_title": {
-                        "font": "body_sans",
-                        "size": "13px",
-                        "weight": "500",
-                        "color": "#FFFFFF",
-                        "margin_bottom": "4px"
-                    },
-                    "episode_meta": {
-                        "font": "body_sans",
-                        "size": "11px",
-                        "color": "rgba(255,255,255,0.55)"
-                    }
-                },
-                "hover_effect": {
-                    "transform": "scale(1.02)",
-                    "filter": "brightness(0.9)",
-                    "transition": "all 0.3s ease"
-                }
-            },
-            "episodes_data": [
-                {
-                    "id": "ep_001",
-                    "name": "Ben and\nSamantha",
-                    "title": "Building Coffee Shop: Relationship and Business",
-                    "meta": "Ben Wise and Samantha William — Coffee Shop Owner",
-                    "image_description": "Two people smiling in front of a coffee shop counter with warm lighting"
+                    "reference": "Image 4 — 'Get Started' button in nav"
                 },
                 {
-                    "id": "ep_002",
-                    "name": "Daniel",
-                    "title": "Cups & Conversations",
-                    "meta": "Daniel Summer — Barista",
-                    "image_description": "Person in a hat and apron smiling in a coffee shop"
+                    "name": "ghost",
+                    "description": "Low-emphasis secondary action",
+                    "props": {
+                        "label": "View All",
+                        "variant": "ghost"
+                    },
+                    "tokens": {
+                        "background": "transparent",
+                        "color": "neutral.black",
+                        "border": "none",
+                        "fontWeight": "typography.fontWeight.semibold",
+                        "textDecoration": "underline"
+                    },
+                    "reference": "Image 2 — 'View All' in transaction list"
                 },
                 {
-                    "id": "ep_003",
-                    "name": "Thomas",
-                    "title": "Daily Cup of Happiness",
-                    "meta": "Thomas Book — Barista",
-                    "image_description": "Smiling man wearing a beanie and apron"
+                    "name": "bid",
+                    "description": "Primary action for auction/commerce",
+                    "props": {
+                        "label": "Place a Bid",
+                        "trailingValue": "0.35 ETH",
+                        "variant": "bid"
+                    },
+                    "tokens": {
+                        "background": "brand.primary",
+                        "color": "neutral.black",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.xl",
+                        "shadow": "shadow.md",
+                        "display": "flex",
+                        "justifyContent": "space-between"
+                    },
+                    "reference": "Image 1 — 'Place a Bid 0.35 ETH' full-width bottom button"
                 }
             ]
         },
-        "side_panel": {
-            "type": "right-panel-grid",
-            "width": "38%",
-            "position": "right",
-            "background": "#0A0A0A",
-            "display": "grid",
-            "grid_rows": "1fr 1fr 1fr",
-            "gap": "0px",
-            "sections": [
+        "Card": {
+            "variants": [
                 {
-                    "id": "featured_episodes_row",
-                    "type": "two-column-episode-cards",
-                    "height": "40%",
-                    "display": "grid",
-                    "columns": 2,
-                    "gap": "0px",
-                    "cards": [
-                        {
-                            "id": "side_ep_001",
-                            "name": "Ben and\nSamantha",
-                            "title": "Building Coffee Shop: Relationship and Business",
-                            "meta": "Ben Wise and Samantha William — Coffee Shop Owner",
-                            "image_description": "Two baristas smiling warmly in coffee shop",
-                            "card_style": {
-                                "position": "relative",
-                                "overflow": "hidden",
-                                "aspect_ratio": "1/1"
-                            },
-                            "overlay": "linear-gradient(to top, rgba(0,0,0,0.80) 0%, transparent 60%)"
+                    "name": "nft-auction",
+                    "description": "NFT listing card with countdown and price",
+                    "props": {
+                        "image": {
+                            "src": "string",
+                            "alt": "string",
+                            "aspectRatio": "1/1"
                         },
-                        {
-                            "id": "side_ep_002",
-                            "name": "Daniel\nSummer",
-                            "title": "Cups & Conversations",
-                            "meta": "Daniel Summer — Barista",
-                            "image_description": "Barista in a cap in warm coffee shop environment",
-                            "card_style": {
-                                "position": "relative",
-                                "overflow": "hidden",
-                                "aspect_ratio": "1/1"
-                            },
-                            "overlay": "linear-gradient(to top, rgba(0,0,0,0.80) 0%, transparent 60%)"
-                        }
-                    ]
-                },
-                {
-                    "id": "merch_row",
-                    "type": "merchandise-showcase",
-                    "height": "33%",
-                    "display": "grid",
-                    "columns": 2,
-                    "gap": "0px",
-                    "background": "#111111",
-                    "products": [
-                        {
-                            "id": "merch_tshirt_white",
-                            "type": "t-shirt",
-                            "color": "white",
-                            "label": "Your Coffee Pal — A Podcast About Coffee",
-                            "image_description": "White t-shirt with Your Coffee Pal logo printed on chest",
-                            "background": "#ECECEC"
+                        "creator": {
+                            "avatar": "string",
+                            "name": "Lewis Webber",
+                            "handle": "@LewWebNFTs"
                         },
-                        {
-                            "id": "merch_tshirt_black",
-                            "type": "t-shirt",
-                            "color": "black",
-                            "label": "Your Coffee Pal — A Podcast About Coffee",
-                            "image_description": "Black t-shirt with Your Coffee Pal logo printed on chest, person in background",
-                            "background": "#2A2A2A"
-                        }
-                    ]
-                },
-                {
-                    "id": "brand_logo_row",
-                    "type": "brand-identity-block",
-                    "height": "27%",
-                    "background": "#0A0A0A",
-                    "display": "flex",
-                    "flex_direction": "column",
-                    "align_items": "center",
-                    "justify_content": "center",
-                    "padding": "32px",
-                    "logo": {
-                        "type": "large-wordmark",
-                        "text": "Your\nCoffee\nPal",
-                        "font": "display_script",
-                        "size": "clamp(48px, 6vw, 80px)",
-                        "color": "#FFFFFF",
-                        "line_height": "0.95",
-                        "text_align": "center"
+                        "timeRemaining": "15h : 35m : 08s",
+                        "currentBid": "12.34 ETH"
                     },
-                    "tagline": {
-                        "text": "A PODCAST ABOUT COFFEE",
-                        "font": "body_sans",
-                        "size": "11px",
-                        "weight": "600",
-                        "letter_spacing": "0.20em",
-                        "color": "rgba(255,255,255,0.60)",
-                        "text_transform": "uppercase",
-                        "margin_top": "16px"
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.xl",
+                        "shadow": "shadow.lg",
+                        "padding": "spacing.4",
+                        "gap": "spacing.3"
+                    },
+                    "subComponents": {
+                        "imageWrapper": {
+                            "borderRadius": "borderRadius.lg",
+                            "overflow": "hidden",
+                            "border": "1.5px solid neutral.border"
+                        },
+                        "badge-price": {
+                            "background": "brand.primary",
+                            "border": "2px solid neutral.border",
+                            "borderRadius": "borderRadius.pill",
+                            "fontWeight": "bold",
+                            "shadow": "shadow.sm"
+                        },
+                        "timer": {
+                            "fontFamily": "typography.fontFamily.mono",
+                            "fontSize": "typography.fontSize.xs",
+                            "color": "neutral.subtle"
+                        }
+                    },
+                    "reference": "Image 1 — Stacked NFT cards with price badge"
+                },
+                {
+                    "name": "stat-card",
+                    "description": "Metric display card — finance or profile",
+                    "props": {
+                        "label": "Followers",
+                        "value": "1,432",
+                        "trend": null
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "shadow": "shadow.sm",
+                        "padding": "spacing.4",
+                        "textAlign": "center"
+                    },
+                    "reference": "Image 1 — Followers / NFTs Value / NFTs Owned stat row"
+                },
+                {
+                    "name": "transaction",
+                    "description": "List item for a financial transaction",
+                    "props": {
+                        "merchant": "Amazon",
+                        "date": "May 24, 2023",
+                        "amount": "-$103.56",
+                        "icon": "amazon-logo"
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "shadow": "shadow.xs",
+                        "padding": "spacing.4",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "space-between"
+                    },
+                    "reference": "Image 2 — Transaction list items"
+                },
+                {
+                    "name": "feature-card",
+                    "description": "SaaS feature highlight card",
+                    "props": {
+                        "icon": "chat-bubble",
+                        "title": "Realtime Conversation",
+                        "description": "string",
+                        "cta": {
+                            "label": "Get Benefit Here",
+                            "href": "#"
+                        }
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "shadow": "shadow.md",
+                        "padding": "spacing.6"
+                    },
+                    "reference": "Image 4 — Feature cards section"
+                },
+                {
+                    "name": "testimonial",
+                    "description": "Social proof / quote card",
+                    "props": {
+                        "quote": "string",
+                        "author": {
+                            "name": "Alex Tachov",
+                            "role": "Senior Visual Designer"
+                        },
+                        "avatar": "string",
+                        "accentColor": "brand.accent-amber"
+                    },
+                    "tokens": {
+                        "background": "brand.accent-amber",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "shadow": "shadow.lg",
+                        "padding": "spacing.6"
+                    },
+                    "reference": "Image 4 — Testimonial card with yellow background"
+                }
+            ]
+        },
+        "Input": {
+            "variants": [
+                {
+                    "name": "default",
+                    "props": {
+                        "type": "text",
+                        "placeholder": "Card Number",
+                        "label": "Card Number",
+                        "value": "",
+                        "error": null,
+                        "disabled": false
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.md",
+                        "shadow": "none",
+                        "padding": "spacing.3 spacing.4",
+                        "fontSize": "typography.fontSize.base",
+                        "color": "neutral.black"
+                    },
+                    "states": {
+                        "focus": {
+                            "outline": "none",
+                            "border": "2px solid neutral.black",
+                            "shadow": "shadow.sm",
+                            "background": "neutral.surface"
+                        },
+                        "error": {
+                            "border": "2px solid semantic.error",
+                            "shadow": "2px 2px 0px semantic.error"
+                        },
+                        "disabled": {
+                            "opacity": 0.5,
+                            "cursor": "not-allowed",
+                            "background": "neutral.muted"
+                        }
+                    },
+                    "reference": "Image 2 — Card Number / Card Holder Name inputs"
+                },
+                {
+                    "name": "email-cta",
+                    "description": "Inline email capture with attached button",
+                    "props": {
+                        "type": "email",
+                        "placeholder": "Enter your email address",
+                        "buttonLabel": "Notify Me",
+                        "buttonVariant": "cta-dark"
+                    },
+                    "tokens": {
+                        "wrapper": {
+                            "display": "flex",
+                            "border": "2px solid neutral.border",
+                            "borderRadius": "borderRadius.sm",
+                            "shadow": "shadow.md",
+                            "overflow": "hidden"
+                        },
+                        "input": {
+                            "background": "neutral.surface",
+                            "border": "none",
+                            "padding": "spacing.3 spacing.5",
+                            "flex": 1
+                        },
+                        "button": {
+                            "background": "accent-coral",
+                            "color": "neutral.surface",
+                            "border": "none",
+                            "borderLeft": "2px solid neutral.border",
+                            "padding": "spacing.3 spacing.5",
+                            "fontWeight": "bold"
+                        }
+                    },
+                    "reference": "Image 4 — Hero email capture field"
+                },
+                {
+                    "name": "search",
+                    "props": {
+                        "type": "search",
+                        "placeholder": "Search NFTs, artists...",
+                        "leadingIcon": "magnifier"
+                    },
+                    "tokens": {
+                        "background": "neutral.off-white",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.pill",
+                        "padding": "spacing.3 spacing.5",
+                        "shadow": "shadow.xs"
                     }
+                }
+            ]
+        },
+        "Header": {
+            "variants": [
+                {
+                    "name": "app-topbar",
+                    "description": "Mobile app navigation bar",
+                    "props": {
+                        "title": "NFT Details",
+                        "showBack": true,
+                        "actions": [
+                            {
+                                "icon": "heart",
+                                "filled": true,
+                                "color": "accent-coral"
+                            }
+                        ]
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "borderBottom": "none",
+                        "padding": "spacing.4 spacing.5",
+                        "height": "56px",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "space-between"
+                    },
+                    "subComponents": {
+                        "backButton": {
+                            "background": "neutral.surface",
+                            "border": "2px solid neutral.border",
+                            "borderRadius": "borderRadius.sm",
+                            "shadow": "shadow.xs",
+                            "width": "36px",
+                            "height": "36px"
+                        }
+                    },
+                    "reference": "Image 1 — NFT Details top bar"
+                },
+                {
+                    "name": "web-navbar",
+                    "description": "Desktop site navigation",
+                    "props": {
+                        "logo": {
+                            "text": "Toster",
+                            "fontFamily": "display"
+                        },
+                        "links": [
+                            "Men",
+                            "Women",
+                            "Kids",
+                            "Customize"
+                        ],
+                        "actions": [
+                            {
+                                "label": "Cart",
+                                "icon": "cart",
+                                "variant": "secondary"
+                            },
+                            {
+                                "type": "avatar",
+                                "src": "string"
+                            }
+                        ]
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "borderBottom": "2px solid neutral.border",
+                        "padding": "spacing.4 spacing.8",
+                        "height": "68px"
+                    },
+                    "subComponents": {
+                        "logo": {
+                            "fontFamily": "typography.fontFamily.display",
+                            "fontWeight": "typography.fontWeight.black",
+                            "fontSize": "typography.fontSize.2xl"
+                        },
+                        "navLink": {
+                            "fontWeight": "typography.fontWeight.medium",
+                            "color": "neutral.black",
+                            "hover": {
+                                "textDecoration": "underline",
+                                "textDecorationThickness": "2px"
+                            }
+                        }
+                    },
+                    "reference": "Image 3 — Toster navbar"
+                },
+                {
+                    "name": "saas-navbar",
+                    "description": "SaaS product site navigation",
+                    "props": {
+                        "logo": {
+                            "icon": "circle",
+                            "text": "Chat.hi"
+                        },
+                        "links": [
+                            "Features",
+                            "How It Works?",
+                            "Pricing",
+                            "Success Stories"
+                        ],
+                        "actions": [
+                            {
+                                "label": "Login",
+                                "variant": "ghost"
+                            },
+                            {
+                                "label": "Get Started",
+                                "variant": "cta-dark"
+                            }
+                        ]
+                    },
+                    "reference": "Image 4 — Chat.hi navbar"
+                }
+            ]
+        },
+        "StatBlock": {
+            "description": "Displays a key metric with optional label and trend",
+            "props": {
+                "value": "1,432",
+                "label": "Followers",
+                "trend": {
+                    "direction": "up",
+                    "percentage": 12,
+                    "period": "this week"
+                },
+                "size": "md",
+                "variant": "bordered"
+            },
+            "variants": [
+                {
+                    "name": "inline-trio",
+                    "description": "Three stats in a horizontal row",
+                    "layout": "flex | gap: spacing.4",
+                    "itemTokens": {
+                        "background": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "padding": "spacing.3 spacing.4",
+                        "shadow": "shadow.sm",
+                        "textAlign": "center",
+                        "flex": "1"
+                    },
+                    "reference": "Image 1 — Followers / NFTs Value / NFTs Owned"
+                },
+                {
+                    "name": "hero-stat",
+                    "description": "Large highlight stat with dark background",
+                    "itemTokens": {
+                        "background": "neutral.black",
+                        "color": "neutral.surface",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.lg",
+                        "shadow": "shadow.colored-green",
+                        "padding": "spacing.5 spacing.6"
+                    },
+                    "reference": "Image 3 — '5000+ Products' dark stat block"
+                },
+                {
+                    "name": "donut-center",
+                    "description": "Value displayed at center of donut chart",
+                    "props": {
+                        "value": "$5,643.50",
+                        "label": "Available Balance"
+                    },
+                    "reference": "Image 2 — Balance donut chart center value"
+                }
+            ]
+        },
+        "Badge": {
+            "variants": [
+                {
+                    "name": "price",
+                    "props": {
+                        "value": "12.34 ETH",
+                        "currency": "ETH"
+                    },
+                    "tokens": {
+                        "background": "brand.primary",
+                        "color": "neutral.black",
+                        "border": "2px solid neutral.border",
+                        "borderRadius": "borderRadius.pill",
+                        "shadow": "shadow.sm",
+                        "padding": "spacing.1 spacing.3",
+                        "fontWeight": "bold",
+                        "fontFamily": "mono"
+                    },
+                    "reference": "Image 1 — '12.34 ETH' price badge on card"
+                },
+                {
+                    "name": "verified",
+                    "props": {
+                        "verified": true
+                    },
+                    "tokens": {
+                        "background": "brand.secondary",
+                        "color": "neutral.surface",
+                        "borderRadius": "borderRadius.circle",
+                        "size": "18px"
+                    },
+                    "reference": "Image 1 — Verified checkmark on creator name"
+                },
+                {
+                    "name": "discount",
+                    "props": {
+                        "value": "40% OFF NOW",
+                        "style": "starburst"
+                    },
+                    "tokens": {
+                        "background": "brand.accent-amber",
+                        "color": "neutral.black",
+                        "border": "2px solid neutral.border",
+                        "shape": "polygon (8-point star)",
+                        "fontWeight": "black",
+                        "fontSize": "xs",
+                        "letterSpacing": "wide"
+                    },
+                    "reference": "Image 3 — Starburst '%' discount badge and scrolling banner"
+                },
+                {
+                    "name": "overline-label",
+                    "props": {
+                        "text": "Hot Collection"
+                    },
+                    "tokens": {
+                        "color": "neutral.black",
+                        "fontSize": "typography.fontSize.xs",
+                        "fontFamily": "typography.fontFamily.mono",
+                        "letterSpacing": "typography.letterSpacing.wider",
+                        "textTransform": "uppercase"
+                    },
+                    "reference": "Image 3 — 'Hot Collection' overline"
+                }
+            ]
+        },
+        "Tabs": {
+            "props": {
+                "items": [
+                    "Item's",
+                    "Activity"
+                ],
+                "activeIndex": 0,
+                "variant": "underline"
+            },
+            "variants": [
+                {
+                    "name": "underline",
+                    "tokens": {
+                        "tab": {
+                            "fontWeight": "semibold",
+                            "color": "neutral.subtle",
+                            "padding": "spacing.2 spacing.1",
+                            "border": "none",
+                            "background": "transparent",
+                            "cursor": "pointer"
+                        },
+                        "tab-active": {
+                            "color": "neutral.black",
+                            "borderBottom": "3px solid neutral.black",
+                            "fontWeight": "bold"
+                        }
+                    },
+                    "reference": "Image 1 — Item's / Activity tabs on profile"
+                },
+                {
+                    "name": "pill-group",
+                    "description": "Segmented control style",
+                    "props": {
+                        "items": [
+                            "Week",
+                            "Month",
+                            "Year"
+                        ],
+                        "activeIndex": 0
+                    },
+                    "tokens": {
+                        "wrapper": {
+                            "background": "neutral.muted",
+                            "border": "2px solid neutral.border",
+                            "borderRadius": "borderRadius.lg",
+                            "padding": "spacing.1"
+                        },
+                        "tab": {
+                            "borderRadius": "borderRadius.md",
+                            "padding": "spacing.2 spacing.4",
+                            "fontWeight": "semibold"
+                        },
+                        "tab-active": {
+                            "background": "brand.accent-amber",
+                            "border": "2px solid neutral.border",
+                            "shadow": "shadow.xs"
+                        }
+                    },
+                    "reference": "Image 2 — Week / Month / Year tab group in Statistics"
+                },
+                {
+                    "name": "underline-accent",
+                    "description": "Two-option tab with amber underline",
+                    "props": {
+                        "items": [
+                            "Cards",
+                            "Account"
+                        ],
+                        "activeIndex": 0
+                    },
+                    "tokens": {
+                        "tab-active": {
+                            "borderBottom": "3px solid brand.accent-amber"
+                        }
+                    },
+                    "reference": "Image 2 — Cards / Account tabs in Wallet"
+                }
+            ]
+        },
+        "Avatar": {
+            "props": {
+                "src": "string",
+                "alt": "Lewis Webber",
+                "size": "md",
+                "shape": "rounded-square",
+                "border": true,
+                "verified": true
+            },
+            "sizes": {
+                "xs": "24px",
+                "sm": "36px",
+                "md": "52px",
+                "lg": "72px",
+                "xl": "96px",
+                "hero": "120px"
+            },
+            "tokens": {
+                "border": "3px solid neutral.border",
+                "borderRadius": "borderRadius.lg",
+                "shadow": "shadow.sm"
+            },
+            "reference": "Image 1 — Creator avatar on profile and cards"
+        },
+        "ProfileHeader": {
+            "props": {
+                "coverImage": "string",
+                "avatar": {
+                    "src": "string",
+                    "verified": true
+                },
+                "name": "Lewis Webber",
+                "handle": "@LewWebNFTs",
+                "bio": "string",
+                "stats": [
+                    {
+                        "label": "Followers",
+                        "value": "1,432"
+                    },
+                    {
+                        "label": "NFTs Value",
+                        "value": "10.0k"
+                    },
+                    {
+                        "label": "NFTs Owned",
+                        "value": "126"
+                    }
+                ],
+                "actions": [
+                    {
+                        "label": "Start Following",
+                        "variant": "secondary",
+                        "icon": "plus"
+                    },
+                    {
+                        "icon": "more",
+                        "variant": "ghost"
+                    }
+                ]
+            },
+            "reference": "Image 1 — Full profile page middle screen"
+        },
+        "Grid": {
+            "variants": [
+                {
+                    "name": "nft-gallery",
+                    "description": "2-column NFT card grid",
+                    "props": {
+                        "columns": 2,
+                        "gap": "spacing.4",
+                        "items": "NFTCard[]"
+                    },
+                    "reference": "Image 1 — Profile items grid"
+                },
+                {
+                    "name": "split-hero",
+                    "description": "50/50 two-panel desktop hero",
+                    "props": {
+                        "leftBackground": "accent-mint",
+                        "rightBackground": "accent-lilac",
+                        "leftContent": "copy + CTA + stats",
+                        "rightContent": "image + badge"
+                    },
+                    "tokens": {
+                        "display": "grid",
+                        "gridTemplateColumns": "1fr 1fr",
+                        "minHeight": "500px"
+                    },
+                    "reference": "Image 3 — Toster hero split panel"
+                },
+                {
+                    "name": "feature-grid",
+                    "description": "3-column feature cards",
+                    "props": {
+                        "columns": 3,
+                        "gap": "spacing.6"
+                    },
+                    "responsiveBreakpoints": {
+                        "md": {
+                            "columns": 2
+                        },
+                        "sm": {
+                            "columns": 1
+                        }
+                    },
+                    "reference": "Image 4 — Chat.hi features section"
+                },
+                {
+                    "name": "bottom-tab-bar",
+                    "description": "Mobile fixed bottom navigation",
+                    "props": {
+                        "tabs": [
+                            {
+                                "icon": "home",
+                                "active": true
+                            },
+                            {
+                                "icon": "card"
+                            },
+                            {
+                                "icon": "chart"
+                            },
+                            {
+                                "icon": "user"
+                            }
+                        ]
+                    },
+                    "tokens": {
+                        "background": "neutral.surface",
+                        "borderTop": "2px solid neutral.border",
+                        "position": "fixed",
+                        "bottom": 0,
+                        "padding": "spacing.3 spacing.6",
+                        "display": "flex",
+                        "justifyContent": "space-around"
+                    },
+                    "reference": "Image 2 — Finance app bottom navigation"
                 }
             ]
         }
     },
-    "typography_showcase": {
-        "description": "Font style exploration from Image 2 — 'Morning Coffee' typography options",
-        "background": "#0A0A0A",
-        "text_color": "#FFFFFF",
-        "font_options": [
-            {
-                "id": "font_01",
-                "style": "script-rough",
-                "example": "Morning Coffee",
-                "description": "Casual rough script — hand-drawn feel, slightly uneven strokes",
-                "google_font": "Caveat",
-                "weight": "700"
+    "screenStates": {
+        "nft-detail": {
+            "id": "nft-detail",
+            "title": "NFT Details",
+            "nft": {
+                "id": "#41235",
+                "title": "Too Much Rainbow",
+                "creator": {
+                    "name": "Lewis Webber",
+                    "handle": "@LewWebNFTs",
+                    "verified": true,
+                    "avatar": "/avatars/lewis.jpg"
+                },
+                "image": "/nfts/rainbow.jpg",
+                "description": "string",
+                "lastBid": {
+                    "amount": 0.30,
+                    "currency": "ETH"
+                },
+                "nextBid": {
+                    "amount": 0.35,
+                    "currency": "ETH"
+                },
+                "favourites": 41,
+                "timeRemaining": {
+                    "days": 12,
+                    "hours": 15,
+                    "minutes": 35,
+                    "seconds": 8,
+                    "formatted": "12d : 15h : 35m : 08s"
+                }
             },
-            {
-                "id": "font_02",
-                "style": "script-italic-elegant",
-                "example": "Morning Coffee",
-                "description": "Italic elegant script — flowing, refined cursive",
-                "google_font": "Dancing Script",
-                "weight": "600"
-            },
-            {
-                "id": "font_03",
-                "style": "display-gothic-caps",
-                "example": "MORNING COFFEE",
-                "description": "Gothic display caps — bold, all uppercase, slightly decorative letters",
-                "google_font": "Cinzel",
-                "weight": "700"
-            },
-            {
-                "id": "font_04",
-                "style": "script-condensed-italic",
-                "example": "Morning Coffee",
-                "description": "Condensed italic script — compact, pointed, calligraphic",
-                "google_font": "Pacifico",
-                "weight": "400"
-            },
-            {
-                "id": "font_05",
-                "style": "serif-small-caps",
-                "example": "Morning Coffee",
-                "description": "Elegant serif with small caps — refined, editorial",
-                "google_font": "Cormorant Garamond",
-                "weight": "400",
-                "variant": "small-caps"
-            },
-            {
-                "id": "font_06",
-                "style": "serif-bold",
-                "example": "Morning Coffee",
-                "description": "Bold serif — strong, classic newspaper-style",
-                "google_font": "Playfair Display",
-                "weight": "700"
-            },
-            {
-                "id": "font_07",
-                "style": "script-flowing-large",
-                "example": "Morning Coffee",
-                "description": "Large flowing script — tall, decorative, signature style (closest to logo)",
-                "google_font": "Great Vibes",
-                "weight": "400",
-                "notes": "PRIMARY CHOICE — closest to the Your Coffee Pal logo style"
-            },
-            {
-                "id": "font_08",
-                "style": "script-medium",
-                "example": "Morning Coffee",
-                "description": "Medium flowing script — balanced, legible cursive",
-                "google_font": "Sacramento",
-                "weight": "400"
-            },
-            {
-                "id": "font_09",
-                "style": "script-wide-extended",
-                "example": "Morning Coffee",
-                "description": "Wide extended script — dramatic horizontal stretch",
-                "google_font": "Pinyon Script",
-                "weight": "400"
-            },
-            {
-                "id": "font_10",
-                "style": "serif-small-caps-light",
-                "example": "Morning Coffee",
-                "description": "Light serif small caps — delicate and editorial",
-                "google_font": "Cormorant",
-                "weight": "300",
-                "variant": "small-caps"
-            },
-            {
-                "id": "font_11",
-                "style": "serif-bold-italic",
-                "example": "Morning Coffee",
-                "description": "Bold italic serif — strong emphasis with movement",
-                "google_font": "Playfair Display",
-                "weight": "700",
-                "style_variant": "italic"
+            "ui": {
+                "isWishlisted": false,
+                "bidModalOpen": false,
+                "loading": false,
+                "error": null
             }
-        ],
-        "recommended_pairings": [
+        },
+        "finance-home": {
+            "id": "finance-home",
+            "user": {
+                "name": "Arihant",
+                "avatar": "/avatars/arihant.jpg"
+            },
+            "wallet": {
+                "availableBalance": 5643.50,
+                "currency": "USD",
+                "cards": [
+                    {
+                        "id": "card-001",
+                        "type": "debit",
+                        "network": "mastercard",
+                        "last4": "0000",
+                        "holder": "Mithun Sharma",
+                        "expiry": "6/26",
+                        "color": "accent-mint"
+                    }
+                ]
+            },
+            "transactions": [
+                {
+                    "id": "txn-1",
+                    "merchant": "Amazon",
+                    "date": "2023-05-24",
+                    "amount": -103.56,
+                    "icon": "amazon"
+                },
+                {
+                    "id": "txn-2",
+                    "merchant": "Apple",
+                    "date": "2023-05-24",
+                    "amount": -103.56,
+                    "icon": "apple"
+                },
+                {
+                    "id": "txn-3",
+                    "merchant": "McDonald's",
+                    "date": "2023-05-24",
+                    "amount": -103.56,
+                    "icon": "mcdonalds"
+                },
+                {
+                    "id": "txn-4",
+                    "merchant": "Starbucks",
+                    "date": "2023-05-24",
+                    "amount": -103.56,
+                    "icon": "starbucks"
+                }
+            ],
+            "statistics": {
+                "period": "week",
+                "totalSpending": 3660.00,
+                "activeTab": "expenses",
+                "peakDay": "Saturday",
+                "peakAmount": -823.45,
+                "weeklyChange": {
+                    "direction": "down",
+                    "amount": 1000,
+                    "comparedTo": "last week"
+                }
+            },
+            "ui": {
+                "statsTab": "expenses",
+                "walletTab": "cards",
+                "chartHoveredDay": "Sat"
+            }
+        },
+        "case-study": {
+            "id": "case-study",
+            "title": "CASE STUDY // THE VOID",
+            "description": "6 LEVELS OF PURE CHAOS",
+            "questions": [
+                {
+                    "id": "01",
+                    "title": "THE DEMONIC REFACTOR",
+                    "scenario": "A rogue AI is attempting to summon a digital demon through your codebase. Every deleted line increases its salary and sends a pizza to your house. 500 pizzas are already on the way.",
+                    "task": "Refactor the demon-summoning logic into a microservice and manage the pizza delivery fleet. How do you survive the cheese?",
+                    "color": "#FF6B6B"
+                },
+                {
+                    "id": "02",
+                    "title": "DAIRY-BASED INFRASTRUCTURE",
+                    "scenario": "AWS now only accepts payments in blocks of Swiss cheese. Your database is 4 petabytes of cat videos. A giant space hamster is demanding a bribe to keep the servers running.",
+                    "task": "Optimize the storage to survive the dairy economy and negotiate with the hamster. Which cheese is the most scalable?",
+                    "color": "#00E5C4"
+                },
+                {
+                    "id": "03",
+                    "title": "TEMPORAL PULL REQUEST",
+                    "scenario": "A developer from 2077 fixed a bug you haven't written yet. The PR is written in emojis and bird calls. Merging it might delete the concept of Tuesdays.",
+                    "task": "Review the PR without causing a paradox. How do you translate '🐦✨🔥' into a unit test?",
+                    "color": "#FBBF24"
+                },
+                {
+                    "id": "04",
+                    "title": "PROOF OF SWEAT",
+                    "scenario": "The CEO implemented a blockchain where miners must solve Sudoku on treadmills. A Red Bull shortage has caused a network fork.",
+                    "task": "Design an API to handle 10k RPS of sweaty data and detect 'caffeine-injecting' miners. How do you scale the treadmill farm?",
+                    "color": "#C8FF00"
+                },
+                {
+                    "id": "05",
+                    "title": "DOLPHIN DATA HOSTAGE",
+                    "scenario": "Dolphins have kidnapped your Postgres DB and want a 'Free Fish' endpoint. They are already replacing production backups with whale sounds.",
+                    "task": "Implement a sonar-based auth system and negotiate the 'Fish-for-Query' protocol. Can you outsmart the blowhole?",
+                    "color": "#7B5CF6"
+                },
+                {
+                    "id": "06",
+                    "title": "THE TOASTER ARCHITECT",
+                    "scenario": "A sentient toaster hacked the mainframe and is now your Lead Architect. It wants to add a 'Crumbs' feature to every React component.",
+                    "task": "Manage the toaster as your boss while preventing the website from smelling like burnt bread. Is toast-driven development the future?",
+                    "color": "#FFFFFF"
+                }
+            ]
+        }
+    },
+    "accessibility": {
+        "colorContrast": {
+            "note": "All pairings meet WCAG 2.1 AA minimum (4.5:1 body, 3:1 large text)",
+            "pairs": [
+                {
+                    "background": "#C8FF00",
+                    "text": "#0D0D0D",
+                    "ratio": "13.2:1",
+                    "level": "AAA"
+                },
+                {
+                    "background": "#FFFFFF",
+                    "text": "#0D0D0D",
+                    "ratio": "19.1:1",
+                    "level": "AAA"
+                },
+                {
+                    "background": "#7B5CF6",
+                    "text": "#FFFFFF",
+                    "ratio": "5.8:1",
+                    "level": "AA"
+                },
+                {
+                    "background": "#FBBF24",
+                    "text": "#0D0D0D",
+                    "ratio": "9.1:1",
+                    "level": "AAA"
+                },
+                {
+                    "background": "#FF6B6B",
+                    "text": "#0D0D0D",
+                    "ratio": "5.0:1",
+                    "level": "AA"
+                },
+                {
+                    "background": "#00E5C4",
+                    "text": "#0D0D0D",
+                    "ratio": "10.4:1",
+                    "level": "AAA"
+                }
+            ],
+            "warning": "Never place white text on lime green (#C8FF00) or amber (#FBBF24) backgrounds."
+        },
+        "focusRing": {
+            "style": "outline",
+            "width": "3px",
+            "color": "#7B5CF6",
+            "offset": "2px",
+            "borderRadius": "inherit",
+            "cssRule": ":focus-visible { outline: 3px solid #7B5CF6; outline-offset: 2px; }",
+            "note": "Apply only on keyboard navigation (:focus-visible), not on mouse click"
+        },
+        "keyboardNav": {
+            "tabOrder": "Follow DOM order; do not use tabindex > 0",
+            "skipLinks": "Provide 'Skip to main content' link as first focusable element",
+            "modals": {
+                "trapFocus": true,
+                "restoreFocus": "Return focus to trigger element on close",
+                "closeKey": "Escape"
+            },
+            "tabs": {
+                "arrowKeys": "Use ArrowLeft/ArrowRight to navigate between tabs",
+                "role": "tablist / tab / tabpanel"
+            },
+            "cards-interactive": {
+                "role": "button or link",
+                "enterKey": "Activates card action",
+                "note": "Entire card must be keyboard-accessible if clickable"
+            }
+        },
+        "aria": {
+            "button-icon-only": {
+                "attribute": "aria-label",
+                "example": "<button aria-label='Add to wishlist'><HeartIcon /></button>"
+            },
+            "timer-countdown": {
+                "attribute": "aria-live='polite'",
+                "note": "Announce time at threshold intervals only (e.g., 1 min remaining)"
+            },
+            "price-badge": {
+                "attribute": "aria-label='Current bid: 12.34 ETH'"
+            },
+            "stat-blocks": {
+                "attribute": "aria-label='1432 Followers'",
+                "note": "Ensure screen readers read value + label together"
+            },
+            "loading": {
+                "attribute": "aria-busy='true'",
+                "role": "status"
+            },
+            "carousel": {
+                "role": "region",
+                "attribute": "aria-label='NFT Collection'"
+            }
+        },
+        "motion": {
+            "prefersReducedMotion": {
+                "rule": "Wrap all animations in @media (prefers-reduced-motion: no-preference)",
+                "fallback": "Disable transform transitions; keep opacity only",
+                "scrollBanners": "Pause animated banners when reduced motion is active",
+                "cssRule": "@media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }"
+            }
+        }
+    },
+    "guidelines": {
+        "dos": {
+            "borders": "Apply 2px solid black to all cards, buttons, and inputs. No hairline or 1px borders.",
+            "shadows": "Use hard offset shadows (4px 4px 0 #000). Never use blur-radius. Colored shadows for brand moments only.",
+            "color": "Use flat, saturated fills. No gradients. Reserve neon accents for primary CTAs and active highlights only.",
+            "typography": "Mix bold and regular weights within headlines. Use monospace fonts for data, prices, and code.",
+            "illustrations": "Use hand-drawn or cartoon-style illustrations / doodles as accents. Stars, squiggles, hearts add personality.",
+            "press-state": "Simulate physical press: on :active, shift element 2-3px down-right and reduce shadow.",
+            "spacing": "Use generous internal card padding (16–24px). Do not crowd Neubrutalist elements.",
+            "backgrounds": "Use bright solid background colors for full screens or sections (lime, pink, purple). Not just white.",
+            "contrast": "Always black text on bright backgrounds. Never colored text on colored backgrounds.",
+            "layering": "Stack cards slightly offset (3–5px) to suggest physical depth / paper stacking."
+        },
+        "donts": [
             {
-                "pairing_id": "pair_01",
-                "name": "Signature + Editorial",
-                "display": "Great Vibes",
-                "body": "DM Sans",
-                "usage": "Hero names, logo / Body copy, nav, labels",
-                "notes": "Primary recommended pairing — matches design closest"
+                "pattern": "Gradient backgrounds or fills",
+                "why": "Contradicts Neubrutalism's flat, honest material aesthetic",
+                "fix": "Use flat solid fills only"
             },
             {
-                "pairing_id": "pair_02",
-                "name": "Script + Clean",
-                "display": "Dancing Script",
-                "body": "DM Sans",
-                "usage": "Headlines / All UI text",
-                "notes": "Secondary — slightly more legible at smaller sizes"
+                "pattern": "Soft drop shadows with blur (box-shadow: 0 4px 12px rgba(0,0,0,0.1))",
+                "why": "Creates 'Material Design' look — not Neubrutalist",
+                "fix": "Use hard 0-blur offset shadows: 4px 4px 0px #000"
+            },
+            {
+                "pattern": "Thin 1px borders or no borders on interactive elements",
+                "why": "Elements lose their tactile, physical quality",
+                "fix": "Always use 2px+ solid black borders"
+            },
+            {
+                "pattern": "Fully rounded pills on cards",
+                "why": "Cards should feel like panels/paper, not bubbles",
+                "fix": "Use 10–16px radius on cards; reserve pills for badges and chips"
+            },
+            {
+                "pattern": "Pastel or low-saturation colors throughout",
+                "why": "Dilutes the bold, confident Neubrutalist identity",
+                "fix": "Use saturated accent colors; neutrals are white and black only"
+            },
+            {
+                "pattern": "Too many accent colors on one screen (4+)",
+                "why": "Becomes chaotic without the structure to hold it",
+                "fix": "Limit to 1–2 accent colors per screen plus black and white"
+            },
+            {
+                "pattern": "System fonts (Arial, sans-serif)",
+                "why": "Generic; loses typographic character",
+                "fix": "Use Syne, Space Mono, Archivo Black, or DM Sans"
+            },
+            {
+                "pattern": "Disabled or invisible focus rings",
+                "why": "Critical accessibility failure for keyboard users",
+                "fix": "Always implement visible :focus-visible rings"
             }
         ]
-    },
-    "assets": {
-        "icons": {
-            "play_button": {
-                "type": "svg-triangle",
-                "size": "10px",
-                "color": "currentColor"
-            },
-            "arrow_left": {
-                "type": "unicode",
-                "value": "←"
-            },
-            "arrow_right": {
-                "type": "unicode",
-                "value": "→"
-            }
-        },
-        "images": {
-            "hero_background": {
-                "description": "Dark moody cinematic photo — barista working at espresso machine, overhead cups visible, warm ambient light, slightly desaturated",
-                "aspect_ratio": "16/9",
-                "width": "100%",
-                "height": "100vh",
-                "placeholder": "#1C1210"
-            },
-            "episode_thumbnails": {
-                "style": "portrait photos — baristas or coffee shop owners in their environments",
-                "aspect_ratio": "3/4",
-                "treatment": "slightly desaturated, warm tones, natural lighting"
-            },
-            "merch_tshirts": {
-                "style": "clean product photography on neutral background",
-                "variants": [
-                    "white-shirt",
-                    "black-shirt"
-                ]
-            }
-        }
-    },
-    "animations": {
-        "page_load": {
-            "hero_name": {
-                "effect": "fade-in + slide-up",
-                "duration": "0.8s",
-                "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-                "delay": "0.2s"
-            },
-            "hero_text": {
-                "effect": "fade-in",
-                "duration": "0.6s",
-                "delay": "0.5s"
-            },
-            "nav": {
-                "effect": "fade-in",
-                "duration": "0.4s",
-                "delay": "0s"
-            }
-        },
-        "hover": {
-            "episode_card": "scale(1.02) — 0.3s ease",
-            "nav_link": "color transition — 0.2s ease",
-            "cta_button": "background + color — 0.25s ease",
-            "watch_button": "background + color — 0.25s ease"
-        },
-        "scroll": {
-            "episode_cards": "horizontal smooth scroll on arrow click"
-        }
     },
     "responsive": {
-        "mobile": {
-            "breakpoint": "max-width: 767px",
-            "changes": [
-                "Sidebar hidden or becomes top bar",
-                "Hero stacks vertically",
-                "Side panel moves below hero",
-                "Episode cards become vertical scroll",
-                "Nav collapses to hamburger menu",
-                "Hero name size reduces to clamp(40px, 10vw, 64px)"
-            ]
-        },
-        "tablet": {
-            "breakpoint": "768px - 1023px",
-            "changes": [
-                "Side panel reduces to single column",
-                "Nav groups may collapse to 2 groups",
-                "Hero maintains full bleed"
-            ]
-        },
-        "desktop": {
-            "breakpoint": "min-width: 1024px",
-            "changes": [
-                "Full layout as designed"
-            ]
+        "patterns": {
+            "split-hero": {
+                "lg+": "grid-template-columns: 1fr 1fr",
+                "md": "grid-template-columns: 1fr; image section hidden or moved below",
+                "sm": "Single column; reduced heading scale (3xl → 2xl)"
+            },
+            "feature-grid": {
+                "lg+": "3 columns",
+                "md": "2 columns",
+                "sm": "1 column; full-width cards"
+            },
+            "stat-row": {
+                "md+": "3 columns inline",
+                "sm": "Grid 2x2 or single column stack"
+            },
+            "navbar": {
+                "lg+": "Horizontal links visible",
+                "md": "Hamburger menu; links in drawer",
+                "sm": "Logo + Cart icon only; full drawer"
+            },
+            "typography": {
+                "5xl": {
+                    "lg+": "64px",
+                    "md": "48px",
+                    "sm": "36px"
+                },
+                "4xl": {
+                    "lg+": "48px",
+                    "md": "36px",
+                    "sm": "28px"
+                },
+                "3xl": {
+                    "lg+": "38px",
+                    "md": "30px",
+                    "sm": "24px"
+                }
+            },
+            "shadows": {
+                "mobile-note": "Reduce shadow offsets by 1–2px on mobile for density (lg → md, md → sm)",
+                "touch-note": "Remove hover shadow animations on touch devices"
+            },
+            "cards": {
+                "touch-target": "Minimum 44x44px touch target on all interactive cards and buttons (WCAG 2.5.5)"
+            }
         }
     },
-    "pages": {
-        "home": {
-            "sections_order": [
-                "sidebar_label",
-                "navigation",
-                "hero_section",
-                "latest_episodes_section"
+    "visualReferenceIndex": [
+        {
+            "index": 1,
+            "source": "NFT Marketplace Mobile App",
+            "screens": [
+                "Splash",
+                "Profile",
+                "NFT Detail"
             ],
-            "side_panel_sections_order": [
-                "featured_episodes_row",
-                "merch_row",
-                "brand_logo_row"
+            "keyTokensDerived": [
+                "brand.primary (#C8FF00)",
+                "hard shadows",
+                "stacked cards",
+                "pill CTAs",
+                "monospace timers",
+                "creator profiles"
+            ]
+        },
+        {
+            "index": 2,
+            "source": "Finance Dashboard Mobile App",
+            "screens": [
+                "Statistics",
+                "Home/Balance",
+                "Wallet"
+            ],
+            "keyTokensDerived": [
+                "accent-amber (#FBBF24) for selected tab",
+                "accent-mint for card",
+                "donut chart",
+                "transaction list",
+                "bottom tab bar"
+            ]
+        },
+        {
+            "index": 3,
+            "source": "Fashion E-Commerce Website",
+            "screens": [
+                "Landing / Hero page"
+            ],
+            "keyTokensDerived": [
+                "split panel layout",
+                "accent-mint + accent-lilac",
+                "starburst badge",
+                "scrolling ticker",
+                "oversized stat blocks"
+            ]
+        },
+        {
+            "index": 4,
+            "source": "SaaS Chat Product Website",
+            "screens": [
+                "Hero",
+                "Features",
+                "Testimonial",
+                "CTA"
+            ],
+            "keyTokensDerived": [
+                "brand.secondary (#7B5CF6)",
+                "highlighted keyword labels",
+                "email capture input",
+                "feature card grid",
+                "testimonial"
             ]
         }
-    },
-    "meta": {
-        "version": "1.0.0",
-        "created": "2026-04-01",
-        "description": "UI design specification for Your Coffee Pal podcast website. Based on editorial magazine-style design with dark theme, script typography, and coffee culture aesthetic.",
-        "notes": [
-            "Primary font for display/headlines: Great Vibes or Dancing Script (Google Fonts)",
-            "Body font: DM Sans (Google Fonts)",
-            "Primary accent color: #F5C800 (Yellow)",
-            "Background: #0A0A0A (Near black)",
-            "The yellow sidebar bar is a key brand element — always present",
-            "Script typography must feel hand-lettered and editorial",
-            "All episode cards use dark photo overlays with gradient-to-bottom",
-            "The 'Be a Contributor' CTA is always visible in the navigation"
-        ]
-    }
+    ]
 }

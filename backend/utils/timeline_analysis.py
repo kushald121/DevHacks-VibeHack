@@ -25,6 +25,6 @@ async def generate_timeline_impact(decision: str, conversation_history: list[dic
         system="You are a timeline analysis expert. Return strict JSON.",
         agent_name="synthesis",
         messages=[*conversation_history[-10:], {"role": "user", "content": prompt}],
-        max_tokens=650,
+        max_tokens=900,
     )
     return _extract_json(response["content"])

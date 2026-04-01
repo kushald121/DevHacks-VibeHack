@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>client</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Space+Mono:wght@400;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+    <title>Decision Copilot</title>
+    <script>
+      (function () {
+        try {
+          var m = localStorage.getItem('csi-ui-theme')
+          if (m === 'dark' || m === 'light') {
+            document.documentElement.dataset.theme = m
+            document.documentElement.style.colorScheme = m === 'dark' ? 'dark' : 'light'
+          }
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

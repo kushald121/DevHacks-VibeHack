@@ -26,7 +26,8 @@ async def call_openrouter(
         "Authorization": f"Bearer {key}",
         "Content-Type": "application/json",
     }
-    models_to_try = [model, "openai/gpt-4o-mini", "anthropic/claude-3-haiku"]
+    # Primary model from env; fallbacks if quota/invalid model (OpenRouter)
+    models_to_try = [model, "openai/gpt-3.5-turbo", "openai/gpt-4o-mini"]
 
     response = None
     for selected_model in models_to_try:
@@ -36,7 +37,7 @@ async def call_openrouter(
             "max_tokens": max_tokens,
             "temperature": 0.4,
         }
-        async with httpx.AsyncClient(timeout=60) as client:
+        async with httpx.AsyncClient(timeout=120) as client:
             response = await client.post(
                 "https://openrouter.ai/api/v1/chat/completions",
                 headers=headers,
